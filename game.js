@@ -574,7 +574,7 @@ function showDotaznik() {
         }).setOrigin(0.5);
 
         this.input.keyboard.on("keydown", (event) => { // Kontroluje, zda byla stisknuta kterákoliv klávesa
-            if (event.key === "Enter") { // Speciální klávesa č.1: Enter
+            if (event.key === "Enter" && inputText != "") { // Speciální klávesa č.1: Enter
                 userData.push(inputText) // Přidá odpověď do uživatelských dat, která chceme posílat
                 inputText = ""; // Vynuluje to text
                 handleNextQuestion.call(this); // Vyšle žádost o další otázku
